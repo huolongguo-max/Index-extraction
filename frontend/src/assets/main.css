@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Apple-inspired Light Mode Design Tokens
+   参考: Apple HIG / macOS 白浅色系
+   ============================================ */
+@layer base {
+  :root {
+    --background: 0 0% 98%;           /* #FBFBFD — Apple 系统背景白 */
+    --foreground: 240 2% 12%;         /* #1D1D1F — Apple 主文字黑 */
+    --card: 0 0% 100%;                /* #FFFFFF — 纯白卡片 */
+    --card-foreground: 240 2% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 2% 12%;
+    --primary: 211 100% 50%;          /* #007AFF — Apple 系统蓝（不变） */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3% 94%;          /* #F0F0F2 — 浅灰次级表面 */
+    --secondary-foreground: 240 2% 12%;
+    --muted: 240 3% 94%;
+    --muted-foreground: 240 2% 54%;   /* #86868B — Apple 灰文字 */
+    --accent: 240 3% 94%;
+    --accent-foreground: 240 2% 12%;
+    --destructive: 0 84% 56%;         /* #FF3B30 — Apple 红 */
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 88%;               /* #E0E0E0 — 浅灰边框 */
+    --input: 0 0% 100%;
+    --ring: 211 100% 50%;
+    --radius: 0.625rem;               /* 10px — Apple 圆角 */
+  }
+}
+
+/* ============================================
+   Global Base Styles
+   ============================================ */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont,
+                 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Apple-style scrollbar (light mode) */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(0 0% 76%); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(0 0% 60%); }
+
+/* Selection color */
+::selection {
+  background: hsl(211 100% 50% / 0.2);
+  color: hsl(240 2% 12%);
+}

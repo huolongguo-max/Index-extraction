@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "standard": {
+      "format": "[{time:YYYY-MM-DD HH:mm:ss.SSS}] [{level:^8}] [{module}:{function}:{line}] {message}",
+      "datefmt": "%Y-%m-%d %H:%M:%S"
+    },
+    "simple": {
+      "format": "[{time:HH:mm:ss}] [{level}] {message}",
+      "datefmt": "%H:%M:%S"
+    }
+  },
+  "handlers": {
+    "console": {
+      "class": "loguru._defaults",
+      "formatter": "simple",
+      "level": "DEBUG"
+    },
+    "file": {
+      "class": "loguru._defaults",
+      "formatter": "standard",
+      "level": "INFO",
+      "rotation": "10 MB",
+      "retention": "7 days",
+      "compression": "zip"
+    },
+    "error_file": {
+      "class": "loguru._defaults",
+      "formatter": "standard",
+      "level": "ERROR",
+      "rotation": "10 MB",
+      "retention": "30 days",
+      "compression": "zip"
+    }
+  },
+  "rpa": {
+    "handlers": ["console", "file", "error_file"],
+    "level": "DEBUG",
+    "description": "RPA 抓取日志：记录浏览器操作、XPath 匹配、数据抓取"
+  },
+  "api": {
+    "handlers": ["console", "file", "error_file"],
+    "level": "INFO",
+    "description": "API 接口日志：记录请求响应、接口报错"
+  },
+  "desktop": {
+    "handlers": ["console", "file"],
+    "level": "INFO",
+    "description": "桌面悬浮窗日志：记录窗口事件、数据刷新"
+  }
+}

@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+
+# Environment configs (keep .env.example only)
+.env
+.env.development
+.env.production
+
+# Build outputs
+dist/
+build/
+*.pyc
+__pycache__/
+
+# Python virtual environment
+venv/
+.venv/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Browser & driver
+chromedriver/
+browser-cache/
+selenium/
+*.crx
+
+# Python cache
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+
+# Nuitka build
+*.build/
+*.dist/
+*.onefile/
+
+# Test coverage
+.coverage
+htmlcov/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

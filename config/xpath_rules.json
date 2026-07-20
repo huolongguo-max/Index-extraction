@@ -1,0 +1,33 @@
+{
+  "_description": "XPath 抓取规则配置文件 - 基于行列文字交叉定位",
+  "_rules": "所有 XPath 必须手写，禁止使用浏览器自动生成的绝对路径",
+  "_format": "normalize-space() 适配隐形空格，仅适配 DIV 结构表格",
+
+  "rules": [
+    {
+      "name": "example_table_extraction",
+      "description": "示例：提取目标网页表格数据",
+      "url_pattern": "https://example.com/data-table*",
+      "table_container": "//div[contains(@class, 'table-wrapper')]",
+      "row_xpath": "//div[contains(@class, 'table-row')]",
+      "columns": [
+        {
+          "name": "column_1",
+          "header_xpath": "//div[contains(@class, 'table-header')]//div[normalize-space(text())='列名1']",
+          "cell_xpath_template": "//div[{row_index}]//div[@data-col='{col_index}']",
+          "data_type": "string"
+        },
+        {
+          "name": "column_2",
+          "header_xpath": "//div[contains(@class, 'table-header')]//div[normalize-space(text())='列名2']",
+          "cell_xpath_template": "//div[{row_index}]//div[@data-col='{col_index}']",
+          "data_type": "number"
+        }
+      ],
+      "pagination": {
+        "next_button_xpath": "//button[normalize-space(text())='下一页']",
+        "max_pages": 10
+      }
+    }
+  ]
+}

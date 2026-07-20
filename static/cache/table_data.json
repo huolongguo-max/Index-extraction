@@ -1,0 +1,62 @@
+{
+  "rule_124b8562e851_latest": {
+    "rule_id": "124b8562e851",
+    "rule_name": "某数据抓取",
+    "target_url": "https://www.cninfo.com.cn/new/commonUrl/pageOfSearch?url=disclosure/list/search&lastPage=index",
+    "headers": [
+      "公告标题"
+    ],
+    "row_count": 1,
+    "rows": [
+      {
+        "公告标题": ""
+      }
+    ],
+    "cached_at": "2026-07-20T01:34:01.018173"
+  },
+  "rule_3c7eda60d6e0_latest": {
+    "rule_id": "3c7eda60d6e0",
+    "rule_name": "东方财富网",
+    "target_url": "https://quote.eastmoney.com/center/gridlist.html#neeq_stocks",
+    "headers": [
+      "最新价"
+    ],
+    "row_count": 1,
+    "rows": [
+      {
+        "最新价": ""
+      }
+    ],
+    "cached_at": "2026-07-20T02:58:46.765033"
+  },
+  "rule_e764bcbc3b12_latest": {
+    "rule_id": "e764bcbc3b12",
+    "rule_name": "东方",
+    "target_url": "https://quote.eastmoney.com/center/gridlist.html#neeq_stocks",
+    "headers": [
+      "最新价"
+    ],
+    "row_count": 1,
+    "rows": [
+      {
+        "最新价": ""
+      }
+    ],
+    "cached_at": "2026-07-20T03:17:55.693521"
+  },
+  "rule_fcbf20f52b9a_latest": {
+    "rule_id": "fcbf20f52b9a",
+    "rule_name": "份",
+    "target_url": "https://quote.eastmoney.com/center/gridlist.html#neeq_stocks",
+    "headers": [
+      "最新价"
+    ],
+    "row_count": 1,
+    "rows": [
+      {
+        "最新价": ""
+      }
+    ],
+    "cached_at": "2026-07-20T03:27:11.343430"
+  }
+}
